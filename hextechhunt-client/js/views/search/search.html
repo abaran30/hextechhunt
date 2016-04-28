@@ -1,0 +1,3 @@
+<input type="text" data-ng-model="summonerName"></input>
+<select data-ng-options="region.name for region in availableRegions track by region.id" data-ng-model="selectedRegion"></select>
+<button data-ng-click="get3Trick(selectedRegion, summonerName)">Search</button>

@@ -1,0 +1,11 @@
+{
+  "name": "hextechhunt-client",
+  "version": "0.0.1",
+  "author": "Adrian Baran",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "jquery": "^2.2.3",
+    "q": "^1.4.1"
+  }
+}
