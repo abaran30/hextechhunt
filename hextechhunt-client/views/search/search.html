@@ -6,6 +6,6 @@
 <br />
 <h2 class="error-text" data-ng-model="errorMessage"></h2>
 <input class="input-field" type="text" placeholder="Summoner name" data-ng-model="summonerName"></input>
-<select data-ng-options="region.name for region in availableRegions track by region.id" data-ng-model="selectedRegion"></select>
+<select class="select-dropdown" data-ng-options="region.name for region in availableRegions track by region.id" data-ng-model="selectedRegion"></select>
 <br />
 <button class="main-button" data-ng-click="get3Trick(selectedRegion, summonerName)">Hunt</button>
