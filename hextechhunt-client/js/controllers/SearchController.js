@@ -1,4 +1,4 @@
-angular.module('lol3trickApp')
+angular.module('hextechhuntClientApp')
 .controller('SearchController',
   function ($scope, $location) {
 

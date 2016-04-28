@@ -1,3 +1,11 @@
-<input type="text" data-ng-model="summonerName"></input>
+<h2 class="sub-header-text">Add more stuff here.
+  <br />
+  <br />
+  See which champions you have mastered and earned a Hextech Chest for this season.
+</h2>
+<br />
+<h2 class="error-text" data-ng-model="errorMessage"></h2>
+<input class="input-field" type="text" placeholder="Summoner name" data-ng-model="summonerName"></input>
 <select data-ng-options="region.name for region in availableRegions track by region.id" data-ng-model="selectedRegion"></select>
-<button data-ng-click="get3Trick(selectedRegion, summonerName)">Search</button>
+<br />
+<button class="main-button" data-ng-click="get3Trick(selectedRegion, summonerName)">Hunt</button>
