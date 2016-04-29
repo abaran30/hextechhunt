@@ -1,10 +1,11 @@
-<h2 class="sub-header-text">Add more stuff here.
+<div class="centered">
+  <h2 class="sub-header-text">Add more stuff here.
+    <br />
+    <br />
+  </h2>
+  <h2 class="error-text">{{ errorMessage }}</h2>
+  <input class="input-field" type="text" placeholder="Summoner name" data-ng-model="summonerName"></input>
+  <select class="select-dropdown" data-ng-options="region.name for region in availableRegions track by region.id" data-ng-model="selectedRegion"></select>
   <br />
-  <br />
-  See which champions you have mastered and earned a Hextech Chest for this season.
-</h2>
-<h2 class="error-text">{{ errorMessage }}</h2>
-<input class="input-field" type="text" placeholder="Summoner name" data-ng-model="summonerName"></input>
-<select class="select-dropdown" data-ng-options="region.name for region in availableRegions track by region.id" data-ng-model="selectedRegion"></select>
-<br />
-<button class="main-button" data-ng-click="hunt(selectedRegion, summonerName)">Hunt</button>
+  <button class="main-button" data-ng-disabled="summonerName === undefined || summonerName === ''" data-ng-click="hunt(selectedRegion, summonerName)">Hunt</button>
+</div>

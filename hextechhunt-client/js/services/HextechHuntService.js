@@ -1,6 +1,5 @@
 angular.module('hextechhuntClientApp')
   .service('HextechHuntService', function($http, $q) {
-    var deferred = $q.defer();
     var baseProxyUrl = 'http://localhost:3030';
 
     var availableRegions = [
@@ -40,6 +39,8 @@ angular.module('hextechhuntClientApp')
     }
 
     this.getSummoner = function(region, summonerName) {
+      var deferred = $q.defer();
+
       $http.get(baseProxyUrl + '/api/lol/' + region + '/v1.4/summoner/by-name/' + summonerName)
         .then(function(response) {
           deferred.resolve(response.data);

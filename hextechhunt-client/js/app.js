@@ -7,7 +7,7 @@ hextechhuntClientApp.config(['$routeProvider',
 		    templateUrl: 'views/search/search.html',
 			  controller: 'SearchController'
 		  })
-      .when('/results/:region/:summonerId', {
+      .when('/results/:summonerName/:region/:summonerId/:profileIconId/:summonerLevel', {
         templateUrl: 'views/results/results.html',
         controller: 'ResultsController'
       })
@@ -15,8 +15,3 @@ hextechhuntClientApp.config(['$routeProvider',
 			  redirectTo: '/search'
 			});
     }]);
-
-// Load the initial page with a fade-in animation
-$(function () {
-    $(document.body).hide().fadeIn(300);
-});

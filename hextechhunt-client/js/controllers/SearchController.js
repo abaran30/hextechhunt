@@ -7,9 +7,17 @@ angular.module('hextechhuntClientApp')
     $scope.hunt = function(selectedRegion, summonerName) {
       HextechHuntService.getSummoner(selectedRegion.id, summonerName)
         .then(function(response) {
-          location.href = '#/results/' + selectedRegion.id + '/' + summonerName;
+          var summonerObject = response[summonerName];
+
+          location.href = '#/results/' + summonerObject.name + '/' + selectedRegion.id + '/' + summonerObject.id + '/' + summonerObject['profileIconId'] + '/'
+            + summonerObject['summonerLevel'];
         }).catch(function(response) {
           $scope.errorMessage = response.data;
         });
     };
+
+    // Load the view with a fade-in animation
+    $(function () {
+        $('#container').hide().fadeIn(300);
+    });
   });

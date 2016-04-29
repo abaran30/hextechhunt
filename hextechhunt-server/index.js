@@ -31,7 +31,7 @@ app.get('/api/lol/:region/v1.4/summoner/by-name/:summonerName', function(req, re
       res.send('Oops! Summoner has not been found!');
     } else {
       res.statusCode = 500;
-      res.send('Yikes... An unknown error has occurred.');
+      res.send('Awkward... An unknown error has occurred.');
     }
   });
 });

@@ -8,8 +8,11 @@ body {
   font-family: 'Roboto', sans-serif;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   width: 70%;
+}
+
+.centered {
+  text-align: center;
 }
 
 .error-text {
@@ -18,11 +21,29 @@ body {
   padding: 1em;
 }
 
+header {
+  background: black;
+  height: 2.5em;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+header img {
+  padding-right: 10px;
+}
+
+.header-icons {
+  padding-top: 10px;
+  text-align: right;
+}
+
 footer {
   background: black;
-  bottom: 0px;
+  bottom: 0;
   height: 2.75em;
-  left: 0px;
+  left: 0;
   padding-top: 10px;
   position: fixed;
   width: 100%;
@@ -33,17 +54,6 @@ footer {
   font-size: 4rem;
   margin-top: 1.5em;
   text-shadow: 2px 2px #1D2C8B;
-}
-
-.main-button {
-  background-color: #1D2C8B;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  font-size: 1.5rem;
-  height: 2em;
-  margin-top: 2em;
-  width: 6em;
 }
 
 .input-field {
@@ -61,6 +71,18 @@ footer {
 .input-field:focus {
   border: 1px #1D2C8B solid;
 }
+
+.main-button {
+  background-color: #1D2C8B;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5rem;
+  height: 2em;
+  margin-top: 2em;
+  width: 6em;
+}
+
 
 .select-dropdown {
   appearance: none;
