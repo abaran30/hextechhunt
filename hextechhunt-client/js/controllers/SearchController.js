@@ -4,12 +4,15 @@ angular.module('hextechhuntClientApp')
     $scope.availableRegions = HextechHuntService.getAvailableRegions(); // Get list of available regions to display in the view
     $scope.selectedRegion = $scope.availableRegions[0]; // Set the default region to the first region from availableRegions
 
-    $scope.hunt = function(selectedRegion, summonerName) {
-      HextechHuntService.getSummoner(selectedRegion.id, summonerName)
-        .then(function(response) {
-          var summonerObject = response[summonerName];
+    $scope.search = function(selectedRegion, summonerName) {
+      var lowerCasedRegion = selectedRegion.id.toLowerCase();
+      var strippedSummonerName = summonerName.replace(/\s+/g, '');
 
-          location.href = '#/results/' + summonerObject.name + '/' + selectedRegion.id + '/' + summonerObject.id + '/' + summonerObject['profileIconId'] + '/'
+      HextechHuntService.getSummoner(lowerCasedRegion, strippedSummonerName)
+        .then(function(response) {
+          var summonerObject = response[strippedSummonerName];
+
+          location.href = '#/results/' + summonerObject.name + '/' + lowerCasedRegion + '/' + summonerObject.id + '/' + summonerObject['profileIconId'] + '/'
             + summonerObject['summonerLevel'];
         }).catch(function(response) {
           $scope.errorMessage = response.data;

@@ -1,1 +1,10 @@
-
+<div class="results-summoner-container">
+  <img class="float-left" data-ng-src="{{ summonerIconSrc }}" />
+  <div class="results-summoner-info">
+    <p class="results-summoner-name">{{ summonerName }}</p>
+    <p class="results-summoner-sub-info">{{ region.toUpperCase() + ' - Level ' + summonerLevel }}</p>
+    <p class="results-summoner-sub-info">{{ summonerRank }}</p>
+  </div>
+  <p class="clear-left"></p>
+  <button class="float-right search-another-button" data-ng-click="returnToSearch()">Search another Summoner</button>
+</div>

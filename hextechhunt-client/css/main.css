@@ -15,6 +15,10 @@ body {
   text-align: center;
 }
 
+.clear-left {
+  clear: left;
+}
+
 .error-text {
   color: #E14E4E;
   font-size: 1.2rem;
@@ -39,6 +43,18 @@ header img {
   text-align: right;
 }
 
+.float-left {
+  float: left;
+}
+
+.float-none {
+  float: none;
+}
+
+.float-right {
+  float: right;
+}
+
 footer {
   background: black;
   bottom: 0;
@@ -57,10 +73,9 @@ footer {
 }
 
 .input-field {
-  appearance: none;
   background-color: #3B3B3B;
-  border-radius: none;
   border: 1px black solid;
+  border-radius: 3px;
   box-shadow: none;
   color: white;
   font-size: 1.5rem;
@@ -72,7 +87,43 @@ footer {
   border: 1px #1D2C8B solid;
 }
 
-.main-button {
+.results-summoner-container {
+  background-color: black;
+  border: 2px #1D2C8B solid;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 85%;
+}
+
+.results-summoner-info {
+  margin-left: 9em;
+  margin-top: -2em;
+}
+
+.results-summoner-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.results-summoner-sub-info {
+  font-size: 1.5rem;
+  line-height: 0.5;
+}
+
+.search-another-button {
+  background-color: #1D2C8B;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8rem;
+  height: 3em;
+  margin-top: -11em;
+  width: 8em;
+}
+
+.search-button {
   background-color: #1D2C8B;
   border: none;
   border-radius: 5px;
@@ -83,11 +134,9 @@ footer {
   width: 6em;
 }
 
-
 .select-dropdown {
-  appearance: none;
   background-color: #3B3B3B;
-  border-radius: none;
+  border-radius: 3px;
   border: 1px black solid;
   box-shadow: none;
   color: white;

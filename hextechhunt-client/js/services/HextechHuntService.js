@@ -51,4 +51,18 @@ angular.module('hextechhuntClientApp')
 
       return deferred.promise;
     };
+
+    this.getSummonerRank = function(region, summonerId) {
+      var deferred = $q.defer();
+
+      $http.get(baseProxyUrl + '/api/lol/' + region + '/v2.5/league/by-summoner/' + summonerId + '/entry')
+        .then(function(response) {
+          deferred.resolve(response.data);
+        })
+        .catch(function(response) {
+          deferred.reject(response);
+        });
+
+      return deferred.promise;
+    }
   });

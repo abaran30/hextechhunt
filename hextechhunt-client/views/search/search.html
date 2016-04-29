@@ -7,5 +7,5 @@
   <input class="input-field" type="text" placeholder="Summoner name" data-ng-model="summonerName"></input>
   <select class="select-dropdown" data-ng-options="region.name for region in availableRegions track by region.id" data-ng-model="selectedRegion"></select>
   <br />
-  <button class="main-button" data-ng-disabled="summonerName === undefined || summonerName === ''" data-ng-click="hunt(selectedRegion, summonerName)">Hunt</button>
+  <button class="search-button" data-ng-disabled="summonerName === undefined || summonerName === ''" data-ng-click="search(selectedRegion, summonerName)">Search</button>
 </div>

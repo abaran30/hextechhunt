@@ -15,6 +15,24 @@ app.use('/', function(req, res, next) {
   next(); // Continue
 });
 
+// Proxy for GET /api/lol/:region/v2.5/league/by-summoner/:summonerId
+app.get('/api/lol/:region/v2.5/league/by-summoner/:summonerId/entry', function(req, res, next) {
+  var region = req.params.region;
+  var summonerId = req.params.summonerId;
+
+  var requestUrl = 'https://na.api.pvp.net/api/lol/' + region + '/v2.5/league/by-summoner/' + summonerId + '/entry?api_key=' + riotApiKey;
+
+  request(requestUrl, function (error, response, body) {
+    if (!error && response.statusCode === 200) {
+      res.statusCode = 200;
+      res.send(body);
+    } else {
+      res.statusCode = 404;
+      res.send('');
+    }
+  });
+});
+
 // Proxy for GET /api/lol/:region/v1.4/summoner/by-name/:summonerName
 app.get('/api/lol/:region/v1.4/summoner/by-name/:summonerName', function(req, res, next) {
   var region = req.params.region;
