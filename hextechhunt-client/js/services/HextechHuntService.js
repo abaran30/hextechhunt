@@ -39,23 +39,21 @@ angular.module('hextechhuntClientApp')
     }
 
     this.getSummoner = function(region, summonerName) {
-      var deferred = $q.defer();
+      var url = baseProxyUrl + '/api/lol/' + region + '/v1.4/summoner/by-name/' + summonerName;
 
-      $http.get(baseProxyUrl + '/api/lol/' + region + '/v1.4/summoner/by-name/' + summonerName)
-        .then(function(response) {
-          deferred.resolve(response.data);
-        })
-        .catch(function(response) {
-          deferred.reject(response);
-        });
-
-      return deferred.promise;
+      return httpGet(url);
     };
 
     this.getSummonerRank = function(region, summonerId) {
+      var url = baseProxyUrl + '/api/lol/' + region + '/v2.5/league/by-summoner/' + summonerId + '/entry';
+
+      return httpGet(url);
+    }
+
+    function httpGet(url) {
       var deferred = $q.defer();
 
-      $http.get(baseProxyUrl + '/api/lol/' + region + '/v2.5/league/by-summoner/' + summonerId + '/entry')
+      $http.get(url)
         .then(function(response) {
           deferred.resolve(response.data);
         })
