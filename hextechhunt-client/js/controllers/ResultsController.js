@@ -22,7 +22,7 @@ angular.module('hextechhuntClientApp')
       var platformId = HextechHuntService.getPlatformId($scope.region.toUpperCase());
       $scope.championMasteryResults = [];
 
-      HextechHuntService.getChampions()
+      HextechHuntService.getChampions($scope.region)
         .then(function(response) {
           var championMap = response.data;
 
@@ -47,6 +47,8 @@ angular.module('hextechhuntClientApp')
                   'hextechChestRewarded': hextechChestRewarded
                 };
 
+                console.log(JSON.stringify(championMasteryResultsObject[championId]));
+
                 $scope.championMasteryResults.push(championMasteryResultsObject);
               }
             }).catch(function(response) {
@@ -62,6 +64,6 @@ angular.module('hextechhuntClientApp')
 
       // Load the view with a fade-in animation
       $(function () {
-          $('#container').hide().fadeIn(300);
+          $('#view-container').hide().fadeIn(300);
       });
     });

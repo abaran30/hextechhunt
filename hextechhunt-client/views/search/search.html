@@ -1,11 +1,25 @@
 <div class="centered">
-  <h2 class="sub-header-text">Add more stuff here.
-    <br />
-    <br />
-  </h2>
+  <!-- Brief application description -->
+  <div class="sub-header-container">
+    <p class="sub-header-text">
+      A new and more comprehensive way to see how you are doing with mastering your favorite Champions and collecting Hextech Chests.
+      HextechHunt will let you know which Champions have done the honor of rewarding you with a Hextech Chest, which Champions hold great potential to reward
+      you with a Chest, and which Champions are still on the journey towards Mastery.</p>
+    <br>
+    <p class="sub-header-text">Enter your Summoner name and select your Region below to view your progress.</p>
+  </div>
+
+  <!-- Error message that will appear if an error occurs with the user's search -->
   <h2 class="error-text">{{ errorMessage }}</h2>
-  <input class="input-field" type="text" placeholder="Summoner name" data-ng-model="summonerName"></input>
-  <select class="select-dropdown" data-ng-options="region.name for region in availableRegions track by region.id" data-ng-model="selectedRegion"></select>
-  <br />
-  <button class="search-button" data-ng-disabled="summonerName === undefined || summonerName === ''" data-ng-click="search(selectedRegion, summonerName)">Search</button>
+
+  <form>
+    <!-- Summoner name input -->
+    <input class="input-field" type="text" placeholder="Summoner name" data-ng-model="summonerName">
+    <!-- Region select -->
+    <select class="select-dropdown" data-ng-options="region.name for region in availableRegions track by region.id" data-ng-model="selectedRegion"></select>
+    <br>
+    <!-- Search button -->
+    <input type="submit" value="Search" class="search-button" data-ng-disabled="summonerName === undefined || summonerName === ''"
+      data-ng-click="search(selectedRegion, summonerName)">
+  </form>
 </div>

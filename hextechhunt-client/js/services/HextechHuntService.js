@@ -34,8 +34,8 @@ angular.module('hextechhuntClientApp')
       return availableRegions;
     };
 
-    this.getChampions = function() {
-      var requestUrl = baseProxyUrl + '/api/lol/static-data/na/v1.2/champion';
+    this.getChampions = function(region) {
+      var requestUrl = baseProxyUrl + '/api/lol/static-data/' + region + '/v1.2/champion';
 
       return httpGet(requestUrl)
     };
