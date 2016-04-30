@@ -15,7 +15,28 @@ app.use('/', function(req, res, next) {
   next(); // Continue
 });
 
-// Proxy for GET /api/lol/:region/v2.5/league/by-summoner/:summonerId
+// Proxy for GET /championmastery/location/{platformId}/player/{summonerId}/champions
+app.get('/championmastery/location/:platformId/player/:summonerId/champions', function(req, res, next) {
+  var platformId = req.params.platformId;
+  var summonerId = req.params.summonerId;
+
+  var requestUrl = 'https://na.api.pvp.net/championmastery/location/' + platformId + '/player/' + summonerId + '/champions?api_key=' + riotApiKey;
+
+  request(requestUrl, function (error, response, body) {
+    if (!error && response.statusCode === 200) {
+      res.statusCode = 200;
+      res.send(body);
+    } else if (response.statusCode === 404) {
+      res.statusCode = 404;
+      res.send('404');
+    } else {
+      res.statusCode = 500;
+      res.send('500');
+    }
+  });
+});
+
+// Proxy for GET /api/lol/{region}/v2.5/league/by-summoner/{summonerId}/entry
 app.get('/api/lol/:region/v2.5/league/by-summoner/:summonerId/entry', function(req, res, next) {
   var region = req.params.region;
   var summonerId = req.params.summonerId;
@@ -33,7 +54,7 @@ app.get('/api/lol/:region/v2.5/league/by-summoner/:summonerId/entry', function(r
   });
 });
 
-// Proxy for GET /api/lol/:region/v1.4/summoner/by-name/:summonerName
+// Proxy for GET /api/lol/{region}/v1.4/summoner/by-name/{summonerName}
 app.get('/api/lol/:region/v1.4/summoner/by-name/:summonerName', function(req, res, next) {
   var region = req.params.region;
   var summonerName = req.params.summonerName;
@@ -46,10 +67,30 @@ app.get('/api/lol/:region/v1.4/summoner/by-name/:summonerName', function(req, re
       res.send(body);
     } else if (response.statusCode === 404) {
       res.statusCode = 404;
-      res.send('Oops! Summoner has not been found!');
+      res.send('404');
     } else {
       res.statusCode = 500;
-      res.send('Awkward... An unknown error has occurred.');
+      res.send('500');
+    }
+  });
+});
+
+// Proxy for GET /api/lol/static-data/{region}/v1.2/champion?dataById=true
+app.get('/api/lol/static-data/:region/v1.2/champion', function(req, res, next) {
+  var region = req.params.region;
+
+  var requestUrl = 'https://global.api.pvp.net/api/lol/static-data/' + region + '/v1.2/champion?dataById=true&api_key=' + riotApiKey;
+
+  request(requestUrl, function (error, response, body) {
+    if (!error && response.statusCode === 200) {
+      res.statusCode = 200;
+      res.send(body);
+    } else if (response.statusCode === 404) {
+      res.statusCode = 404;
+      res.send('404');
+    } else {
+      res.statusCode = 500;
+      res.send('500');
     }
   });
 });

@@ -34,26 +34,38 @@ angular.module('hextechhuntClientApp')
       return availableRegions;
     };
 
+    this.getChampions = function() {
+      var requestUrl = baseProxyUrl + '/api/lol/static-data/na/v1.2/champion';
+
+      return httpGet(requestUrl)
+    };
+
+    this.getChampionMasteryEntries = function(platformId, summonerId) {
+      var requestUrl = baseProxyUrl + '/championmastery/location/' + platformId + '/player/' + summonerId + '/champions';
+
+      return httpGet(requestUrl);
+    }
+
     this.getPlatformId = function(region) {
       return platforms[region];
     }
 
     this.getSummoner = function(region, summonerName) {
-      var url = baseProxyUrl + '/api/lol/' + region + '/v1.4/summoner/by-name/' + summonerName;
+      var requestUrl = baseProxyUrl + '/api/lol/' + region + '/v1.4/summoner/by-name/' + summonerName;
 
-      return httpGet(url);
+      return httpGet(requestUrl);
     };
 
     this.getSummonerRank = function(region, summonerId) {
-      var url = baseProxyUrl + '/api/lol/' + region + '/v2.5/league/by-summoner/' + summonerId + '/entry';
+      var requestUrl = baseProxyUrl + '/api/lol/' + region + '/v2.5/league/by-summoner/' + summonerId + '/entry';
 
-      return httpGet(url);
-    }
+      return httpGet(requestUrl);
+    };
 
-    function httpGet(url) {
+    function httpGet(requestUrl) {
       var deferred = $q.defer();
 
-      $http.get(url)
+      $http.get(requestUrl)
         .then(function(response) {
           deferred.resolve(response.data);
         })
