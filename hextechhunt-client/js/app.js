@@ -1,16 +1,25 @@
 var hextechhuntClientApp = angular.module('hextechhuntClientApp', ['ngRoute']);
 
+// Application routing
 hextechhuntClientApp.config(['$routeProvider',
 	function ($routeProvider) {
     $routeProvider
+			// About
+			.when('/about', {
+				templateUrl: 'views/about/about.html',
+				controller: 'AboutController'
+			})
+			// Results
+			.when('/results/:summonerName/:region/:summonerId/:profileIconId/:summonerLevel', {
+				templateUrl: 'views/results/results.html',
+				controller: 'ResultsController'
+			})
+			// Search
       .when('/search', {
 		    templateUrl: 'views/search/search.html',
 			  controller: 'SearchController'
 		  })
-      .when('/results/:summonerName/:region/:summonerId/:profileIconId/:summonerLevel', {
-        templateUrl: 'views/results/results.html',
-        controller: 'ResultsController'
-      })
+			// Else --> Search
 		  .otherwise({
 			  redirectTo: '/search'
 			});

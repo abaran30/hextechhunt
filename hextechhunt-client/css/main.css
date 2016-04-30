@@ -13,6 +13,7 @@ body {
   background-position: top center;
   color: white;
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
   width: 70%;
@@ -87,6 +88,38 @@ footer {
   border: 1px #1D2C8B solid;
 }
 
+.left-align {
+  text-align: left;
+}
+
+.results-hextech-champion-name {
+  padding-left: 0.5em;
+}
+
+.results-hextech-header-col {
+  font-size: 1.25rem;
+}
+
+.results-hextech-key {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 85%;
+}
+
+.results-hextech-row {
+  border-bottom: 1px solid #3B3B3B;
+  border-top: 1px solid #3B3B3B;
+  font-size: 1.25rem;
+}
+
+.results-hextech-table {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
 .results-summoner-container {
   background-color: black;
   border: 2px #1D2C8B solid;
@@ -156,4 +189,12 @@ footer {
 
 .sub-header-text {
   font-size: 1.5rem;
+}
+
+tr {
+  height: 4em;
+}
+
+.vertical-align-image {
+  vertical-align: middle;
 }

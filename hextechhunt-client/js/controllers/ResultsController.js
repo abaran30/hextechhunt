@@ -7,6 +7,15 @@ angular.module('hextechhuntClientApp')
       $scope.summonerIconSrc = 'http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/' + $routeParams.profileIconId + '.png';
       $scope.summonerLevel = $routeParams.summonerLevel;
 
+      var specialChampionsForIconUrl = {
+        'ChoGath': 'Chogath',
+        'Fiddlesticks': 'FiddleSticks',
+        'LeBlanc': 'Leblanc',
+        'KhaZix': 'Khazix',
+        'VelKoz': 'Velkoz',
+        "Wukong": 'MonkeyKing' // Uhm... Oops?
+      };
+
       HextechHuntService.getSummonerRank($scope.region, $scope.summonerId)
         .then(function(response) {
           var tierString = response[$scope.summonerId][0].tier;
@@ -32,22 +41,39 @@ angular.module('hextechhuntClientApp')
                 var championId = response[i]['championId'];
                 var championName = championMap[championId.toString()].name;
                 var championMasteryLevel = response[i]['championLevel'];
-                var championPoints = response[i]['championPoints'];
+                var championMasteryPoints = response[i]['championPoints'];
                 var highestGradeEarned = response[i]['highestGrade'];
                 var hextechChestRewarded = response[i]['chestGranted'];
 
-                var championMasteryResultsObject = {};
+                // Adjust the Champion's name in order to get the correct URL for the Champion's (square) icon
+                var strippedChampionName = championName.replace(/\W+/g, '');
 
-                championMasteryResultsObject[championId] = {
-                  'championIconSrc': 'http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/' + championName + '.png',
+                if (specialChampionsForIconUrl[strippedChampionName]) {
+                  strippedChampionName = specialChampionsForIconUrl[strippedChampionName];
+                }
+
+                var championIconSrc = 'http://ddragon.leagueoflegends.com/cdn/6.9.1/img/champion/' + strippedChampionName + '.png';
+
+                // Analyze the Champion Mastery and determine whether or not the Champion has significant potential to award the player with a Hextech Chest
+                // in the near future (if a Chest has not been rewarded already)
+                var hextechChestRewardedIcon = 'images/checkmark.png'; // Default,
+
+                if (!hextechChestRewarded) {
+                  if (championMasteryLevel === 5 || (championMasteryLevel >= 4 && (highestGradeEarned === 'A' || highestGradeEarned === 'A+'))) {
+                    hextechChestRewardedIcon = 'images/asterisk.png';
+                  } else {
+                    hextechChestRewardedIcon = 'images/x.png';
+                  }
+                }
+
+                var championMasteryResultsObject = {
+                  'championIconSrc': championIconSrc,
                   'championName': championName,
                   'championMasteryLevel': championMasteryLevel,
-                  'championPoints': championPoints,
+                  'championMasteryPoints': championMasteryPoints,
                   'highestGradeEarned': highestGradeEarned,
-                  'hextechChestRewarded': hextechChestRewarded
+                  'hextechChestRewarded': hextechChestRewardedIcon
                 };
-
-                console.log(JSON.stringify(championMasteryResultsObject[championId]));
 
                 $scope.championMasteryResults.push(championMasteryResultsObject);
               }

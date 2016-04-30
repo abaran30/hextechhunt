@@ -8,5 +8,30 @@
   <p class="clear-left"></p>
   <button class="float-right search-another-button" data-ng-click="returnToSearch()">Search another Summoner</button>
 </div>
-<div>
+<br>
+<br>
+<div class="results-hextech-key">
+  <img class="vertical-align-image" src="images/checkmark.png" height="30" width="30"><span>&nbsp;&nbsp;Hextech Chest acquired.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <img class="vertical-align-image" src="images/x.png" height="30" width="30"><span>&nbsp;&nbsp;Hextech Chest not acquired.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  <img class="vertical-align-image" src="images/asterisk.png" height="30" width="30"><span>&nbsp;&nbsp;Hextech Chest not acquired, but the potential to earn one looks high.</span>
 </div>
+<br>
+<br>
+<table class="results-hextech-table">
+  <tr>
+    <th class="results-hextech-header-col left-align">Champion</th>
+    <th class="results-hextech-header-col centered">Mastery Level</th>
+    <th class="results-hextech-header-col centered">Mastery Points</th>
+    <th class="results-hextech-header-col centered">Highest Grade</th>
+    <th class="results-hextech-header-col centered">Hextech Chest</th>
+  </tr>
+  <tr class="results-hextech-row" ng-repeat="championMastery in championMasteryResults">
+    <td><img class="vertical-align-image" data-ng-src="{{ championMastery.championIconSrc }}" height="50" width="50">
+      <span class="results-hextech-champion-name">{{ championMastery.championName }}</span>
+    </td>
+    <td class="centered">{{ championMastery.championMasteryLevel }}</td>
+    <td class="centered">{{ championMastery.championMasteryPoints }}</td>
+    <td class="centered">{{ championMastery.highestGradeEarned }}</td>
+    <td class="centered"><img data-ng-src="{{ championMastery.hextechChestRewarded }}" height="30" width="30"></td>
+  </tr>
+</table>
