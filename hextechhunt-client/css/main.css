@@ -1,3 +1,20 @@
+@media (max-width: 800px) {
+  html {
+    font-size: 30%;
+  }
+}
+
+a:link {
+  color: #1D2C8B;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1D2C8B;
+  text-decoration: none;
+}
+
 .app-logo {
   font-family: 'Audiowide', sans-serif;
   font-size: 4rem;
@@ -16,7 +33,7 @@ body {
   margin-bottom: 100px;
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
+  width: 90%;
 }
 
 .canvas-loader-wrapper {
@@ -94,6 +111,21 @@ footer {
   border: 1px #1D2C8B solid;
 }
 
+.input-field-2 {
+  background-color: #3B3B3B;
+  border: 1px black solid;
+  border-radius: 3px;
+  box-shadow: none;
+  color: white;
+  font-size: 1.25rem;
+  padding: 5px;
+  width: 25%;
+}
+
+.input-field-2:focus {
+  border: 1px #1D2C8B solid;
+}
+
 .left-align {
   text-align: left;
 }
@@ -106,10 +138,15 @@ footer {
   font-size: 1.25rem;
 }
 
+.results-hextech-filters {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+}
+
 .results-hextech-key {
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
   width: 85%;
 }
 

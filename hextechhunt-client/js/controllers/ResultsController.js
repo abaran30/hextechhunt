@@ -62,7 +62,7 @@ angular.module('hextechhuntClientApp')
                 var hextechChestRewardedIcon = 'images/checkmark.png'; // Default,
 
                 if (!hextechChestRewarded) {
-                  if (championMasteryLevel === 5 || (championMasteryLevel >= 4 && (highestGradeEarned === 'A' || highestGradeEarned === 'A+'))) {
+                  if (championMasteryLevel >= 4 && (highestGradeEarned === 'A' || highestGradeEarned === 'A+')) {
                     hextechChestRewardedIcon = 'images/asterisk.png';
                   } else {
                     hextechChestRewardedIcon = 'images/x.png';
