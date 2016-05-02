@@ -19,6 +19,12 @@ body {
   width: 70%;
 }
 
+.canvas-loader-wrapper {
+  left: 50%;
+  position: absolute;
+  top: 45%;
+}
+
 .centered {
   text-align: center;
 }

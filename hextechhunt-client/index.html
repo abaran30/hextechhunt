@@ -10,16 +10,18 @@
     <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Roboto:300'>
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
-    <!-- External Node modules -->
+    <!-- External Node and JavaScript modules -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/lib/heartcode-canvasloader-min.js"></script>
 
     <!-- JavaScript -->
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/controllers/AboutController.js"></script>
     <script type="text/javascript" src="js/controllers/ResultsController.js"></script>
     <script type="text/javascript" src="js/controllers/SearchController.js"></script>
+    <script type="text/javascript" src="js/services/CanvasLoaderService.js"></script>
     <script type="text/javascript" src="js/services/HextechHuntService.js"></script>
   </head>
   <body>
@@ -36,6 +38,9 @@
     <div class="centered">
       <h1 class="app-logo">HextechHunt</h1>
     </div>
+
+    <!-- Heartcode Canvas Loader -->
+    <div id="canvasloader-container" class="canvas-loader-wrapper"></div>
 
     <!-- AngularJS ngView -->
     <div id="view-container" data-ng-view=""></div>

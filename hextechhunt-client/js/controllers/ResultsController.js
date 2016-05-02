@@ -1,6 +1,6 @@
 angular.module('hextechhuntClientApp')
   .controller('ResultsController',
-    function ($scope, $routeParams, HextechHuntService) {
+    function ($scope, $routeParams, CanvasLoaderService, HextechHuntService) {
       $scope.summonerName = $routeParams.summonerName;
       $scope.region = $routeParams.region;
       $scope.summonerId = $routeParams.summonerId;
@@ -15,6 +15,9 @@ angular.module('hextechhuntClientApp')
         'VelKoz': 'Velkoz',
         "Wukong": 'MonkeyKing' // Uhm... Oops?
       };
+
+      $('#view-container').hide();
+      CanvasLoaderService.showSpinner();
 
       HextechHuntService.getSummonerRank($scope.region, $scope.summonerId)
         .then(function(response) {
@@ -76,6 +79,9 @@ angular.module('hextechhuntClientApp')
                 };
 
                 $scope.championMasteryResults.push(championMasteryResultsObject);
+
+                CanvasLoaderService.hideSpinner();
+                $('#view-container').hide().fadeIn(300);
               }
             }).catch(function(response) {
               // TODO: Handle error
@@ -87,9 +93,4 @@ angular.module('hextechhuntClientApp')
       $scope.returnToSearch = function() {
         location.href = '#/search';
       };
-
-      // Load the view with a fade-in animation
-      $(function () {
-          $('#view-container').hide().fadeIn(300);
-      });
     });
