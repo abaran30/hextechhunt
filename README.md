@@ -5,9 +5,7 @@ HextechHunt is a web application that will allow League of Legends players to ke
 ##Technologies
 Working on it...
 
-##Architecture
-Here's an overview of the application's bread and butter components:
-![alt tag](HextechHuntArchitecture.png)
+## Overview/Architecture/I don't know yet
 
 ##Experiences while Developing (Lessons Learned)
 I have a list of stuff written down. Just need to put it to text here. :O
