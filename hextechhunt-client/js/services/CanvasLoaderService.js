@@ -14,10 +14,12 @@ angular.module('hextechhuntClientApp')
     loaderObject.style["left"] = canvasLoader.getDiameter() * -0.5 + "px";
 
     this.showSpinner = function() {
+      $('#view-container').hide();
       canvasLoader.show();
     };
 
     this.hideSpinner = function() {
       canvasLoader.hide();
+      $('#view-container').hide().fadeIn(300);
     };
   });

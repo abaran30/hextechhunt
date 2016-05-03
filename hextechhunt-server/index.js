@@ -67,10 +67,10 @@ app.get('/api/lol/:region/v1.4/summoner/by-name/:summonerName', function(req, re
       res.send(body);
     } else if (response.statusCode === 404) {
       res.statusCode = 404;
-      res.send('404');
+      res.send('Oops! Requested Summoner has not been found...');
     } else {
       res.statusCode = 500;
-      res.send('500');
+      res.send('Well, this is awkward... Something went wrong. Please try again later?');
     }
   });
 });

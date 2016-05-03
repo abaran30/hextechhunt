@@ -6,6 +6,7 @@ angular.module('hextechhuntClientApp')
       $scope.summonerId = $routeParams.summonerId;
       $scope.summonerIconSrc = 'http://ddragon.leagueoflegends.com/cdn/6.9.1/img/profileicon/' + $routeParams.profileIconId + '.png';
       $scope.summonerLevel = $routeParams.summonerLevel;
+      $scope.errorMessage = null;
 
       var specialChampionsForIconUrl = {
         'ChoGath': 'Chogath',
@@ -16,7 +17,6 @@ angular.module('hextechhuntClientApp')
         "Wukong": 'MonkeyKing' // Uhm... Oops?
       };
 
-      $('#view-container').hide();
       CanvasLoaderService.showSpinner();
 
       HextechHuntService.getSummonerRank($scope.region, $scope.summonerId)
@@ -81,13 +81,12 @@ angular.module('hextechhuntClientApp')
                 $scope.championMasteryResults.push(championMasteryResultsObject);
 
                 CanvasLoaderService.hideSpinner();
-                $('#view-container').hide().fadeIn(300);
               }
             }).catch(function(response) {
-              // TODO: Handle error
+              $scope.errorMessage = response.data;
             });
         }).catch(function(response) {
-
+          $scope.errorMessage = response.data;
         });
 
       $scope.returnToSearch = function() {
