@@ -6,17 +6,17 @@ hextechhuntClientApp.config(['$routeProvider',
     $routeProvider
 			// About
 			.when('/about', {
-				templateUrl: 'views/about/about.html',
+				templateUrl: 'views/about.html',
 				controller: 'AboutController'
 			})
 			// Results
 			.when('/results/:summonerName/:region/:summonerId/:profileIconId/:summonerLevel', {
-				templateUrl: 'views/results/results.html',
+				templateUrl: 'views/results.html',
 				controller: 'ResultsController'
 			})
 			// Search
       .when('/search', {
-		    templateUrl: 'views/search/search.html',
+		    templateUrl: 'views/search.html',
 			  controller: 'SearchController'
 		  })
 			// Else --> Search

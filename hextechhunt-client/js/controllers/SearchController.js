@@ -7,7 +7,7 @@ angular.module('hextechhuntClientApp')
       // On-click handler for the Search button
       $scope.search = function(selectedRegion, summonerName) {
         var lowerCasedRegion = selectedRegion.id.toLowerCase(); // Get the region's ID and make it lowercase for a more reliable search
-        var strippedSummonerName = summonerName.replace(/\s+/g, ''); // Strip the Summoner name of whitespace for a more reliable search
+        var strippedSummonerName = summonerName.replace(/\s+/g, '').toLowerCase(); // Strip the Summoner name of whitespace for a more reliable search
 
         // Get Summoner information
         HextechHuntService.getSummoner(lowerCasedRegion, strippedSummonerName)

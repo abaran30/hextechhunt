@@ -36,7 +36,7 @@
       <th class="results-hextech-header-col centered">Highest Grade</th>
       <th class="results-hextech-header-col centered">Hextech Chest</th>
     </tr>
-    <tr class="results-hextech-row" ng-repeat="championMastery in championMasteryResults | filter: championName">
+    <tr class="results-hextech-row" ng-repeat="championMastery in championMasteryResults | filter: {championName: championName}">
       <td><img class="vertical-align-image" data-ng-src="{{ championMastery.championIconSrc }}" height="50" width="50">
         <span class="results-hextech-champion-name">{{ championMastery.championName }}</span>
       </td>
