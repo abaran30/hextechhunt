@@ -26,12 +26,9 @@ app.get('/championmastery/location/:platformId/player/:summonerId/champions', fu
     if (!error && response.statusCode === 200) {
       res.statusCode = 200;
       res.send(body);
-    } else if (response.statusCode === 404) {
-      res.statusCode = 404;
-      res.send('404');
     } else {
       res.statusCode = 500;
-      res.send('500');
+      res.send('Uh oh.. Something went wrong. Please try again later.');
     }
   });
 });
@@ -67,10 +64,10 @@ app.get('/api/lol/:region/v1.4/summoner/by-name/:summonerName', function(req, re
       res.send(body);
     } else if (response.statusCode === 404) {
       res.statusCode = 404;
-      res.send('Oops! Requested Summoner has not been found...');
+      res.send('Oops! Summoner has not been found...');
     } else {
       res.statusCode = 500;
-      res.send('Well, this is awkward... Something went wrong. Please try again later?');
+      res.send('Uh oh.. Something went wrong. Please try again later.');
     }
   });
 });
@@ -85,12 +82,9 @@ app.get('/api/lol/static-data/:region/v1.2/champion', function(req, res, next) {
     if (!error && response.statusCode === 200) {
       res.statusCode = 200;
       res.send(body);
-    } else if (response.statusCode === 404) {
-      res.statusCode = 404;
-      res.send('404');
     } else {
       res.statusCode = 500;
-      res.send('500');
+      res.send('Uh oh.. Something went wrong. Please try again later.');
     }
   });
 });
