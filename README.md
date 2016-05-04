@@ -1,6 +1,6 @@
 # hextechhunt
 
-HextechHunt is a web application that will allow League of Legends players to keep track of their Hextech Chest rewards via Champion Mastery for the current season. Players can enter their Summoner name and select their Region to view a comprehensive list of Champions that they have played, and see whether or not they have been granted a Hextech Chest as a reward for Champion Mastery. The list will also indicate which Champions hold significant potential to reward the player with a Chest if they have not been rewarded already.
+HextechHunt is a web application that will allow League of Legends players to keep track of their Hextech Chest rewards via Champion Mastery for the current season. Players can enter their Summoner name and select their Region to view a comprehensive list of Champions that they have played, and see whether or not they have been granted a Hextech Chest as a reward for Champion Mastery (by either themselves or a teammate). The list will also indicate which Champions hold significant potential to reward the player with a Chest if they have not been rewarded already.
 
 ## The Technologies and Libraries
 + [AngularJS (1.5.5)](https://angularjs.org/)
@@ -10,6 +10,7 @@ HextechHunt is a web application that will allow League of Legends players to ke
 + [jQuery (2.2.3)](https://jquery.com/)
 + [Normalize.css (4.1.1)](https://necolas.github.io/normalize.css/)
 + [Heartcode CanvasLoader (0.9.1)](https://github.com/heartcode/CanvasLoader)
++ [Ionicons (2.0.1)](http://ionicons.com/)
 
 ## Overview and Control Flow
 Here is an overview of the app's bread and butter components at work:

@@ -1,7 +1,15 @@
-<!-- Error message that will appear if an error occurs with retrieving Championdata -->
-<h2 class="error-text">{{ errorMessage }}</h2>
+<!-- This container will only be visible if an error has occurred -->
+<div class="centered" ng-hide="errorMessage === null">
+  <!-- Error message that will appear if an error occurs with retrieving Champion and/or Champion Mastery data -->
+  <h2 class="error-text">{{ errorMessage }}</h2>
+  <br>
+  <!-- Back button to return the user to the Home (Search) view -->
+  <button class="search-button" data-ng-click="returnToSearch()">Back</button>
+</div>
 
+<!-- This container will only be visible if no error has occurred -->
 <div ng-hide="errorMessage !== null">
+  <!-- Summoner info; including name, icon, region, level, and rank -->
   <div class="results-summoner-container">
     <img class="float-left" data-ng-src="{{ summonerIconSrc }}" />
     <div class="results-summoner-info">
@@ -10,25 +18,33 @@
       <p class="results-summoner-sub-info">{{ summonerRank }}</p>
     </div>
     <p class="clear-left"></p>
+    <!-- Button to return the user to the Home (Search) view -->
     <button class="float-right search-another-button" data-ng-click="returnToSearch()">Search another Summoner</button>
   </div>
+
   <br>
   <br>
+
+  <!-- Key to explain the icon-scheme used in the Hextech Chest column of the results -->
   <div class="results-hextech-key">
-    <img class="vertical-align-image" src="images/checkmark.png" height="30" width="30"><span>&nbsp;&nbsp;Hextech Chest acquired.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <img class="vertical-align-image" src="images/checkmark.png" height="30" width="30"><span>&nbsp;&nbsp;Hextech Chest acquired.</span>
     <br>
-    <img class="vertical-align-image" src="images/asterisk.png" height="30" width="30"><span>&nbsp;&nbsp;Hextech Chest not acquired, but the potential to earn one looks high.</span>
+    <img class="vertical-align-image" src="images/asterisk.png" height="30" width="30"><span>&nbsp;&nbsp;Hextech Chest not acquired, but the potential to earn
+      one looks high.</span>
     <br>
-    <img class="vertical-align-image" src="images/x.png" height="30" width="30"><span>&nbsp;&nbsp;Hextech Chest not acquired.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <img class="vertical-align-image" src="images/x.png" height="30" width="30"><span>&nbsp;&nbsp;Hextech Chest not acquired.</span>
   </div>
   <br>
   <br>
 
+  <!-- Filters for the results; including search by Champion name -->
   <div class="results-hextech-filters">
     <input class="input-field-2" type="text" placeholder="Search for Champion" data-ng-model="championName">
   </div>
 
+  <!-- Main results -->
   <table class="results-hextech-table">
+    <!-- Header row -->
     <tr>
       <th class="results-hextech-header-col left-align">Champion</th>
       <th class="results-hextech-header-col centered">Mastery Level</th>
@@ -36,6 +52,7 @@
       <th class="results-hextech-header-col centered">Highest Grade</th>
       <th class="results-hextech-header-col centered">Hextech Chest</th>
     </tr>
+    <!-- Data rows -->
     <tr class="results-hextech-row" ng-repeat="championMastery in championMasteryResults | filter: {championName: championName}">
       <td><img class="vertical-align-image" data-ng-src="{{ championMastery.championIconSrc }}" height="50" width="50">
         <span class="results-hextech-champion-name">{{ championMastery.championName }}</span>
