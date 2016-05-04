@@ -14,7 +14,7 @@ HextechHunt is a web application that will allow League of Legends players to ke
 ## Overview and Control Flow
 Here is an overview of the app's bread and butter components at work:
 
-![alt tag](https://www.gitub,com/abaran30/hextechhunt/hextechhunt-overview.png)
+![alt tag](hextechhunt-overview.png)
 
 ## Experiences and Challenges
 Although I am very well aware that this app is basic, and that many entries in the Riot Games API Challenges demonstrate phenomenal experience in design, development, data analysis, etc., I took the development of this app as an opportunity to learn and grow. The majority of my development experience comes from back-end development both academically and profressionally. Only recently did I start getting into front-end development and frameworks such as AngularJS and Node. Hence, I took all that I knew, learned and did what I could, and ended up with *HextechHunt*.
