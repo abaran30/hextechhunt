@@ -1,6 +1,6 @@
 # hextechhunt
 
-HextechHunt is a web application that will allow League of Legends players to keep track of their Hextech Chest rewards via Champion Mastery for the current season. Players can enter their Summoner name and select their Region to view a comprehensive list of Champions that they have played, and see whether or not they have been granted a Hextech Chest as a reward for Champion Mastery. The list will also indicate which Champions hold a significant potential to reward the user with a Chest if they have not been rewarded already.
+HextechHunt is a web application that will allow League of Legends players to keep track of their Hextech Chest rewards via Champion Mastery for the current season. Players can enter their Summoner name and select their Region to view a comprehensive list of Champions that they have played, and see whether or not they have been granted a Hextech Chest as a reward for Champion Mastery. The list will also indicate which Champions hold significant potential to reward the player with a Chest if they have not been rewarded already.
 
 ## The Technologies and Libraries
 + [AngularJS (1.5.5)](https://angularjs.org/)
