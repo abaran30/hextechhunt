@@ -36,8 +36,11 @@ Some challenges I faced:
 
 ### Steps
 + Install [Node.js](https://nodejs.org/en/) and [Npm](https://www.npmjs.com/). I believe the Node.js installer for Windows and Mac will also install Npm for you, while Linux users will be required to install it separately via their package manager. Please double check though! You can check your installation of Node.js via command-line: `node --version`. The same can be done for Npm: `npm --version`.
-+ Clone this repository to a location of your choosing: `git clone https://github.com/abaran30/hextechhunt.git`
+
++ Clone this repository to a location of your choosing. Run command `git clone https://github.com/abaran30/hextechhunt.git`
+
 + Inside the project folder will be two additional folders: *hextechhunt-client* and *hextechhunt-server*. Run the `npm install` command in **both** of those folders.
+
 + After you verify a successful installation of dependencies (a *node_modules* folder will appear in both *hextechhunt-client* and *hextechhunt-server*), you will now need to run two processes. I recommend having two terminal instances open for this; one for each process. For the first process, in *hextech-client*, run command `http-server`. If successful, you should see output like the following:
 ```
 Starting up http-server, serving ./
@@ -46,6 +49,7 @@ Available on:
   http://192.168.1.2:8080
 Hit CTRL-C to stop the server
 ```
+
 + For the second process, in *hextech-server*, run command `npm start`. If successful, you should see output like the following:
 ```
 
