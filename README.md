@@ -31,7 +31,9 @@ Some challenges I faced:
 ## How to Run Locally
 ### Prerequisites
 + Make sure [Git](https://git-scm.com/) in installed and configured on your machine.
+
 + Obtain an API key from [Riot Games Developers](https://developer.riotgames.com/) site.
+
 + Create an environment variable called **RIOT_API_KEY** to reflect this key. Example: `export RIOT_API_KEY="my-riot-api-key-goes-here"`
 
 ### Steps
@@ -59,7 +61,7 @@ Hit CTRL-C to stop the server
 HextechHunt (Server) started at http://localhost:3030
 ```
 
-+ At this point, the application is running locally! Open up your favorite browser and navigate to http://localhost:8080. If all went well, you will be in HextechHunt!
++ At this point, the application is running locally! Open up your favorite browser and navigate to http://localhost:8080. If all went well, you will be in *HextechHunt*!
 
 ## Special Thanks
 Special thanks to Riot Games for giving us the opportunity to create these awesome, game-data-driven applications. Win or lose this API Challenge (April 2016), it has been a most pleasurable experience to create my own application featuring Riot Games data and League of Legends. Developing this app helped me learn more about the aforementioned technologies and API-driven development in general, and for that I am grateful.
