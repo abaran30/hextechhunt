@@ -16,12 +16,12 @@ URL will be here soon.
 + [Ionicons (2.0.1)](http://ionicons.com/)
 
 ## Overview and Control Flow
-Here is an overview of the app's bread and butter components at work:
+Here is an overview of the application's bread and butter components at work:
 
 ![alt tag](hextechhunt-overview.png)
 
 ## Experiences and Challenges
-Although I am very well aware that this app is basic, and that many entries in the Riot Games API Challenges demonstrate phenomenal experience in design, development, data analysis, etc., I took the development of this app as an opportunity to learn and grow. The majority of my development experience comes from back-end development both academically and profressionally. Only recently did I start getting into front-end development and frameworks such as AngularJS and Node. Hence, I took all that I knew, learned and did what I could, and ended up with *HextechHunt*.
+Although I am very well aware that this application is basic, and that many entries in the Riot Games API Challenges demonstrate phenomenal experience in design, development, data analysis, etc., I took the development of this application as an opportunity to learn and grow. The majority of my development experience comes from back-end development both academically and profressionally. Only recently did I start getting into front-end development and frameworks such as AngularJS and Node. Hence, I took all that I knew, learned and did what I could, and ended up with *HextechHunt*.
 
 Some challenges I faced:
 + I am a full-time employee, so I had to be efficient with time management.
@@ -37,7 +37,9 @@ Some challenges I faced:
 + Create an environment variable called **RIOT_API_KEY** to reflect this key. Example: `export RIOT_API_KEY="my-riot-api-key-goes-here"`
 
 ### Steps
-+ Install [Node.js](https://nodejs.org/en/) and [Npm](https://www.npmjs.com/). I believe the Node.js installer for Windows and Mac will also install Npm for you, while Linux users will be required to install it separately via their package manager. Please double check though! You can check your installation of Node.js via command-line: `node --version`. The same can be done for Npm: `npm --version`.
++ Install [Node.js](https://nodejs.org/en/) and [Npm](https://www.npmjs.com/). I believe the Node.js installer for Windows and Mac will also install Npm for you, while Linux users will be required to install it separately via their package manager. Please double check though! You can check your installation of Node.js via command-line: `node --version` or `nodejs --version`. The same can be done for Npm: `npm --version`.
+
++ Install the [http-server](https://www.npmjs.com/package/http-server) package via `npm` globally: `npm install http-server -g`.
 
 + Clone this repository to a location of your choosing. Run command `git clone https://github.com/abaran30/hextechhunt.git`
 
@@ -61,10 +63,15 @@ Hit CTRL-C to stop the server
 HextechHunt (Server) started at http://localhost:3030
 ```
 
-+ At this point, the application is running locally! Open up your favorite browser and navigate to http://localhost:8080. If all went well, you will be in *HextechHunt*!
++ At this point, the application is running locally! Open up your favorite browser (Google Chrome and Firefox recommended) and navigate to http://localhost:8080. If all went well, you will be in *HextechHunt*!
+
+### Notes for Development
+When the project is running locally, keep in mind of the following:
++ Changes made to the code/markup in *hextech-client* should be reflected in the application immediately upon browser refresh. If for some reason you are not seeing your changes in the application, check to make sure the `http-server` is still running and clear your browser's cache.
++ Changes made to the code in *hextech-server* will require a server restart. Simply kill the server process (Ctrl + C) and re-run `npm start` in *hextech-server*.
 
 ## Special Thanks
-Special thanks to Riot Games for giving us the opportunity to create these awesome, game-data-driven applications. Win or lose this API Challenge (April 2016), it has been a most pleasurable experience to create my own application featuring Riot Games data and League of Legends. Developing this app helped me learn more about the aforementioned technologies and API-driven development in general, and for that I am grateful.
+Special thanks to Riot Games for giving us the opportunity to create these awesome, game-data-driven applications. Win or lose this API Challenge (April 2016), it has been a most pleasurable experience to create my own application featuring Riot Games data and League of Legends. Developing this application helped me learn more about the aforementioned technologies and API-driven development in general, and for that I am grateful.
 
 ## Disclaimer
 
