@@ -21,7 +21,7 @@ Here is an overview of the application's bread and butter components at work:
 ![alt tag](hextechhunt-overview.png)
 
 ## Experiences and Challenges
-Although I am very well aware that this application is basic, and that many entries in the Riot Games API Challenges demonstrate phenomenal skills in design, development, data analysis, etc., I took the development of this application as an opportunity to learn and grow. The majority of my development experience comes from back-end development both academically and profressionally. Only recently did I start getting into front-end development and frameworks such as AngularJS and Node. Hence, I took all that I knew, learned and did what I could, and ended up with *HextechHunt*.
+Although I am very well aware that this application is fairly simple, and that many Riot Games API Challenge entries demonstrate phenomenal skills in design, development, data analysis, etc., I took the development of this application as an opportunity to learn and grow. The majority of my development experience comes from back-end development both academically and professionally. Only recently did I start getting into front-end development and frameworks such as AngularJS and Node. Hence, I took all that I knew, learned and did what I could, and ended up with *HextechHunt*.
 
 Some challenges I faced:
 + I am a full-time employee, so time management was a big challenge.
@@ -29,7 +29,7 @@ Some challenges I faced:
 + I had some issues with the Static Data, primarily with the Champion (square) images. I had to convert the names of some of the Champions with camel-case names; e.g. *LeBlanc* had to get converted to *Leblanc*. However, *Rek'Sai* only had to lose the apostrophe, and keep its camel-case name (?). Finally, there is *Wukong*, who had to get converted to *MonkeyKing*. Figured that out thanks to this [forum discussion](https://developer.riotgames.com/discussion/community-discussion/show/p7fE97po).
 
 ## If I Had Extra Time, I Would Have Liked To...
-+ Learn and utilize a web framework to handle and serve both *hextechhunt-client* and *hextechhunt-server*.
++ Learn and utilize a web framework to handle/serve both *hextechhunt-client* and *hextechhunt-server*.
 + Allow sorting the results in the Results view.
 + Optimize the application for mobile view.
 + Generally improve styling.
@@ -40,18 +40,18 @@ Some challenges I faced:
 
 + Obtain an API key from [Riot Games Developers](https://developer.riotgames.com/) site.
 
-+ Create an environment variable called **RIOT_API_KEY** to reflect this key. Example: `export RIOT_API_KEY="riot-api-key-goes-here"`
++ Create an environment variable called **RIOT_API_KEY** to reflect this key. Example, `export RIOT_API_KEY="riot-api-key-goes-here"`.
 
 ### Steps
-+ Install [Node.js](https://nodejs.org/en/) and [Npm](https://www.npmjs.com/). I believe the Node.js installer for Windows and Mac will also install Npm for you, while Linux users will be required to install it separately via their package manager. Please double check though! You can check your installation of Node.js via command-line: `node --version` or `nodejs --version`. The same can be done for Npm: `npm --version`.
++ Install [Node.js](https://nodejs.org/en/) and [Npm](https://www.npmjs.com/). I believe the Node.js installer for Windows and Mac will also install Npm for you, while Linux users will be required to install it separately via package manager. Please double check though! You can check your installation of Node.js with `node --version` or `nodejs --version`. The same can be done for Npm with `npm --version`.
 
-+ Install the [http-server](https://www.npmjs.com/package/http-server) package via `npm` globally: `npm install http-server -g`.
++ Install the [http-server](https://www.npmjs.com/package/http-server) package globally with `npm install http-server -g`.
 
-+ Clone this repository to a location of your choosing. Run command `git clone https://github.com/abaran30/hextechhunt.git`
++ Clone this repository to a location of your choosing with `git clone https://github.com/abaran30/hextechhunt.git`
 
-+ Inside the project folder will be two additional folders: *hextechhunt-client* and *hextechhunt-server*. Run the `npm install` command in **both** of those folders.
++ Inside the project folder will be two additional folders: *hextechhunt-client* and *hextechhunt-server*. Run `npm install` in **both** of those folders.
 
-+ After you verify a successful installation of dependencies (a *node_modules* folder will appear in both *hextechhunt-client* and *hextechhunt-server*), you will now need to run two processes. I recommend having two terminal instances open for this; one for each process. For the first process, in *hextech-client*, run command `http-server`. If successful, you should see output like the following:
++ After you verify a successful installation of dependencies (a *node_modules* folder will appear in both *hextechhunt-client* and *hextechhunt-server*), you will now need to run two processes. I recommend having two terminal instances open for this; one for each process. For the first process, in *hextech-client*, run `http-server`. If successful, you should see output like the following:
 ```
 Starting up http-server, serving ./
 Available on:
@@ -60,7 +60,7 @@ Available on:
 Hit CTRL-C to stop the server
 ```
 
-+ For the second process, in *hextech-server*, run command `npm start`. If successful, you should see output like the following:
++ For the second process, in *hextech-server*, run `npm start`. If successful, you should see output like the following:
 ```
 
 > hextechhunt-server@0.0.1 start /home/some/path/hextechhunt/hextechhunt-server
@@ -69,7 +69,7 @@ Hit CTRL-C to stop the server
 HextechHunt (Server) started at http://localhost:3030
 ```
 
-+ At this point, the application is running locally! Open up your favorite browser (Google Chrome and Firefox recommended) and navigate to http://localhost:8080. If all went well, you will be in *HextechHunt*!
++ At this point, the application is running locally! Open up your favorite browser (Google Chrome or Firefox recommended) and navigate to http://localhost:8080. If all went well, you will be in *HextechHunt*!
 
 ### Notes for Development
 When the project is running locally, keep in mind of the following:

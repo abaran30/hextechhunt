@@ -2,6 +2,12 @@
   "name": "hextechhunt-client",
   "version": "0.0.1",
   "author": "Adrian Baran",
+  "description": "Client component for the HextechHunt web application (hextechhunt-client).",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abaran30/hextechhunt"
+  },
+  "license": "MIT",
   "dependencies": {
     "angular": "^1.5.5",
     "angular-route": "^1.5.5",

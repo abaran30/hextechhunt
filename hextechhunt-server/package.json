@@ -2,6 +2,12 @@
   "name": "hextechhunt-server",
   "version": "0.0.1",
   "author": "Adrian Baran",
+  "description": "Server component for the HextechHunt web application (hextechhunt-server).",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abaran30/hextechhunt"
+  },
+  "license": "MIT",
   "main": "index.js",
   "scripts": {
     "start": "node index.js $HOST"
