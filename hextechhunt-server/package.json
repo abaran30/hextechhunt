@@ -4,7 +4,7 @@
   "author": "Adrian Baran",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js $HOST"
   },
   "dependencies" : {
     "express" : "^4.13.1",

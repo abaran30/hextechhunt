@@ -4,12 +4,13 @@ var express = require('express');
 var request = require('request');
 var app = express();
 
+var hostAddress = process.argv.slice(2)[0];
 var riotApiKey = process.env.RIOT_API_KEY; // My development API key
 
 // Express middleware
 app.use('/', function(req, res, next) {
   // Application headers
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080'); // Allow connection from HextechHunt (Client) host
+  res.setHeader('Access-Control-Allow-Origin', 'http://' + hostAddress + ':8080'); // Allow connection from HextechHunt (Client) host
   res.setHeader('Access-Control-Allow-Methods', 'GET'); // Allow GET request methods only
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // Allow X-Requested-With and content-type request headers
   next(); // Continue
@@ -96,6 +97,6 @@ app.get('/api/lol/static-data/:region/v1.2/champion', function(req, res, next) {
 
 // Start listening
 // "Stay awhile and listen." -Deckard Cain
-app.listen(3030, 'localhost', function() {
-  console.log('HextechHunt (Server) started at http://localhost:3030');
+app.listen(3030, hostAddress, function() {
+  console.log('HextechHunt (Server) started at http://' + hostAddress + ':3030');
 });
