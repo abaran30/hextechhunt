@@ -1,6 +1,7 @@
 angular.module('hextechhuntClientApp')
   .controller('AboutController',
     function ($scope) {
+      // Return the user to the Home (Search) view
       $scope.returnToSearch = function() {
         location.href = '#/search';
       };

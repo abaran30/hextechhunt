@@ -10,7 +10,7 @@ var riotApiKey = process.env.RIOT_API_KEY; // My development API key
 // Express middleware
 app.use('/', function(req, res, next) {
   // Application headers
-  res.setHeader('Access-Control-Allow-Origin', 'http://' + hostAddress + ':8080'); // Allow connection from HextechHunt (Client) host
+  res.setHeader('Access-Control-Allow-Origin', 'http://' + hostAddress + ':8080'); // Allow connection from the host only
   res.setHeader('Access-Control-Allow-Methods', 'GET'); // Allow GET request methods only
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // Allow X-Requested-With and content-type request headers
   next(); // Continue
@@ -30,7 +30,7 @@ app.get('/championmastery/location/:platformId/player/:summonerId/champions', fu
       res.send(body);
     } else { // Error - send generic error message
       res.statusCode = 500; // There's not much that the user can do to rectify the supported error codes, so send a 500 for all errors
-      res.send('Uh oh.. Something went wrong. Please try again later.');
+      res.send('Uh-oh, something went wrong. Please try again later.');
     }
   });
 });
@@ -71,7 +71,7 @@ app.get('/api/lol/:region/v1.4/summoner/by-name/:summonerName', function(req, re
       res.send('Oops! Summoner has not been found...');
     } else { // Error (misc. error code) - send generic error message
       res.statusCode = 500;
-      res.send('Uh oh.. Something went wrong. Please try again later.');
+      res.send('Uh-oh, something went wrong. Please try again later.');
     }
   });
 });
@@ -88,9 +88,8 @@ app.get('/api/lol/static-data/:region/v1.2/champion', function(req, res, next) {
       res.statusCode = 200;
       res.send(body);
     } else { // Error - send generic error message
-      res.statusCode = 500;
-      res.send('Uh oh.. Something went wrong. Please try again later.'); // There's not much that the user can do to rectify the supported error codes, so
-                                                                         // send a 500 for all errors
+      res.statusCode = 500; // There's not much that the user can do to rectify the supported error codes, so send a 500 for all errors
+      res.send('Uh-oh, something went wrong. Please try again later.');
     }
   });
 });

@@ -14,7 +14,7 @@ angular.module('hextechhuntClientApp')
         'LeBlanc': 'Leblanc',
         'KhaZix': 'Khazix',
         'VelKoz': 'Velkoz',
-        "Wukong": 'MonkeyKing' // Uhm... Oops?
+        "Wukong": 'MonkeyKing' // Uhm..?
       };
 
       CanvasLoaderService.showSpinner();

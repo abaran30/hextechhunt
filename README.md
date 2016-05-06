@@ -24,13 +24,13 @@ Here is an overview of the application's bread and butter components at work:
 Although I am very well aware that this application is basic, and that many entries in the Riot Games API Challenges demonstrate phenomenal experience in design, development, data analysis, etc., I took the development of this application as an opportunity to learn and grow. The majority of my development experience comes from back-end development both academically and profressionally. Only recently did I start getting into front-end development and frameworks such as AngularJS and Node. Hence, I took all that I knew, learned and did what I could, and ended up with *HextechHunt*.
 
 Some challenges I faced:
-+ I am a full-time employee, so I had to be efficient with time management.
++ I am a full-time employee, so time management was a big challenge.
 + When implementing the Results using Champion and ChampionMastery data, my JavaScript promises were misbehaving >:( I had to carefully analyze my returned promises and come up with a way to enforce data integrity.
 + I had some issues with the Static Data, primarily with the Champion (square) images. I had to convert the names of some of the Champions with camel-case names; e.g. *LeBlanc* had to get converted to *Leblanc*. However, *Rek'Sai* only had to lose the apostrophe, and keep its camel-case name (?). Finally, there is *Wukong*, who had to get converted to *MonkeyKing*. Figured that out thanks to this [forum discussion](https://developer.riotgames.com/discussion/community-discussion/show/p7fE97po).
 
 ## How to Run Locally
 ### Prerequisites
-+ Make sure [Git](https://git-scm.com/) in installed and configured on your machine.
++ Make sure [Git](https://git-scm.com/) is installed and configured on your machine.
 
 + Obtain an API key from [Riot Games Developers](https://developer.riotgames.com/) site.
 
@@ -54,11 +54,11 @@ Available on:
 Hit CTRL-C to stop the server
 ```
 
-+ For the second process, in *hextech-server*, run command `npm start`. If successful, you should see output like the following:
++ For the second process, in *hextech-server*, run command `HOST=localhost npm start`. If successful, you should see output like the following:
 ```
 
 > hextechhunt-server@0.0.1 start /home/some/path/hextechhunt/hextechhunt-server
-> node index.js
+> node index.js $HOST
 
 HextechHunt (Server) started at http://localhost:3030
 ```
@@ -68,7 +68,7 @@ HextechHunt (Server) started at http://localhost:3030
 ### Notes for Development
 When the project is running locally, keep in mind of the following:
 + Changes made to the code/markup in *hextech-client* should be reflected in the application immediately upon browser refresh. If for some reason you are not seeing your changes in the application, check to make sure the `http-server` is still running and clear your browser's cache.
-+ Changes made to the code in *hextech-server* will require a server restart. Simply kill the server process (Ctrl + C) and re-run `npm start` in *hextech-server*.
++ Changes made to the code in *hextech-server* will require a server restart. Simply kill the server process (Ctrl + C) and re-run `HOST=localhost npm start` in *hextech-server*.
 
 ## Special Thanks
 Special thanks to Riot Games for giving us the opportunity to create these awesome, game-data-driven applications. Win or lose this API Challenge (April 2016), it has been a most pleasurable experience to create my own application featuring Riot Games data and League of Legends. Developing this application helped me learn more about the aforementioned technologies and API-driven development in general, and for that I am grateful.
