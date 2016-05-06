@@ -97,6 +97,6 @@ app.get('/api/lol/static-data/:region/v1.2/champion', function(req, res, next) {
 
 // Start listening
 // "Stay awhile and listen." -Deckard Cain
-app.listen(3030, hostAddress, function() {
-  console.log('HextechHunt (Server) started at http://' + hostAddress + ':3030');
+app.listen(3030, 'localhost', function() {
+  console.log('HextechHunt (Server) started at http://localhost:3030');
 });
