@@ -4,7 +4,12 @@ var express = require('express');
 var request = require('request');
 var app = express();
 
-var hostAddress = process.argv.slice(2)[0];
+var hostAddress = process.argv.slice(2)[0]; // Host address
+
+if (!hostAddress) {
+  hostAddress = 'localhost'; // If no host address has been provided, set the default to "localhost"
+}
+
 var riotApiKey = process.env.RIOT_API_KEY; // My development API key
 
 // Express middleware
@@ -97,5 +102,5 @@ app.get('/api/lol/static-data/:region/v1.2/champion', function(req, res, next) {
 // Start listening
 // "Stay awhile and listen." -Deckard Cain
 app.listen(3030, 'localhost', function() {
-  console.log('HextechHunt (Server) started at http://localhost:3030');
+  console.log('HextechHunt (Server) started at http://' + hostAddress + ':3030');
 });

@@ -1,5 +1,7 @@
-// TODO: I am not a fan of this implementation, but for now, I cannot think of a better way to resolve the proxy URL without dismantling the established
-// control-flow...
+// NOTE: I am not a fan of this implementation, but for now, I cannot think of a better way to resolve the proxy URL without dismantling the established
+// control-flow
+//
+// TODO: If and when time permits, see if I can get rid of this...
 angular.module('hextechhuntClientApp')
   .service('ProxyHostResolverService', function($http, $location) {
     // Get the appropriate proxy URL to communicate with the HextechHunt Server

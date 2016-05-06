@@ -1,7 +1,6 @@
 angular.module('hextechhuntClientApp')
   .service('HextechHuntService', function($http, $q, ProxyHostResolverService) {
     var baseProxyUrl = ProxyHostResolverService.getBaseProxyUrl();
-    console.log(baseProxyUrl);
 
     var availableRegions = [
       {id: 'NA', name: 'NA'},
