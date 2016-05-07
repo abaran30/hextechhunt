@@ -7,7 +7,7 @@ angular.module('hextechhuntClientApp')
       };
 
       // Load the view with a fade-in animation
-      $(function () {
+      $(function() {
           $('#view-container').hide().fadeIn(300);
       });
     });
