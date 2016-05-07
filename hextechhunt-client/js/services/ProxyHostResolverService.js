@@ -8,6 +8,7 @@ angular.module('hextechhuntClientApp')
     this.getBaseProxyUrl = function() {
       var currentHost = $location.host();
 
+      // Check if the currentHost is "localhost"
       if (currentHost === 'localhost') {
         return 'http://localhost:3030'; // Return the localhost address
       } else {
