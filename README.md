@@ -31,6 +31,7 @@ Some challenges I faced:
 ## If I Had Extra Time, I Would Have Liked To...
 + Learn and utilize a web framework to simplify my implementation.
 + Allow sorting the results in the Results view.
++ Come up with a more sophisticated way of predicting which Champions hold significant potential to reward the player with a Chest if they have not been rewarded already.
 + End to end testing with [Protractor](http://angular.github.io/protractor/#/).
 + Make the application more responsive for better mobile viewing.
 + Generally improve styling.

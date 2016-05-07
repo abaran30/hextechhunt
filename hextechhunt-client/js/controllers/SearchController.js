@@ -19,7 +19,9 @@ angular.module('hextechhuntClientApp')
             location.href = '#/results/' + summonerObject.name + '/' + lowerCasedRegion + '/' + summonerObject.id + '/' + summonerObject['profileIconId'] + '/'
               + summonerObject['summonerLevel'];
           }).catch(function(response) {
+            $('.error-text').hide();
             $scope.errorMessage = response.data; // Error, display the message in the Search view
+            $('.error-text').fadeIn(300);
           });
       };
 
