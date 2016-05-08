@@ -2,7 +2,7 @@
 
 HextechHunt is a web application that will allow League of Legends players to keep track of their Hextech Chest rewards via Champion Mastery for the current season. Players can enter their Summoner name and select their Region to view a comprehensive list of Champions that they have played, and see whether or not they have been granted a Hextech Chest as a reward for Champion Mastery (by either themselves or a teammate). The list will also indicate which Champions hold significant potential to reward the player with a Chest if they have not been rewarded already.
 
-## Live URL
+## Live Demo
 Demo can be found [here](http://104.236.80.122:8080/).
 
 ## The Technologies and Libraries
@@ -21,7 +21,7 @@ Here is an overview of the application's bread and butter components at work:
 ![alt tag](hextechhunt-overview.png)
 
 ## Experiences and Challenges
-Although I am very well aware that this application is simple, and that many Riot Games API Challenge entries demonstrate phenomenal skills in design, development, data analysis, etc., I took the development of this application as an opportunity to learn and grow. The majority of my development experience comes from back-end development both academically and professionally. Only recently did I start getting into front-end development and frameworks such as AngularJS and Node. Hence, I took all that I knew, learned and did what I could, and ended up with *HextechHunt*.
+Although I am very well aware that this application is simple, and that many Riot Games API Challenge entries demonstrate phenomenal skills in design, development, data analysis, etc., I took the development of this application as an opportunity to learn and grow. The majority of my development experience comes from back-end development both academically and professionally. Only recently did I start getting into front-end development and frameworks such as AngularJS and Node.js. Hence, I took all that I knew, learned and did what I could, and ended up with *HextechHunt*.
 
 Some challenges I faced:
 + I am a full-time employee, so time management was a big challenge.
@@ -31,7 +31,7 @@ Some challenges I faced:
 ## If I Had Extra Time, I Would Have Liked To...
 + Learn and utilize a web framework to simplify my implementation.
 + Allow sorting the results in the Results view.
-+ Come up with a more sophisticated way of predicting which Champions hold significant potential to reward the player with a Chest if they have not been rewarded already.
++ Come up with a more sophisticated way of predicting which Champions hold significant potential to reward the player with a Chest, if they have not been rewarded already.
 + End to end testing with [Protractor](http://angular.github.io/protractor/#/).
 + Make the application more responsive for better mobile viewing.
 + Generally improve styling.
@@ -40,18 +40,18 @@ Some challenges I faced:
 ### Prerequisites
 + Make sure [Git](https://git-scm.com/) is installed and configured on your machine.
 
-+ Obtain an API key from [Riot Games Developers](https://developer.riotgames.com/) site.
++ Obtain an API key from the [Riot Games Developers](https://developer.riotgames.com/) site.
 
 + Create an environment variable called **RIOT_API_KEY** to reflect this key. Example, `export RIOT_API_KEY="riot-api-key-goes-here"`.
 
 ### Steps
-+ Install [Node.js](https://nodejs.org/en/) and [Npm](https://www.npmjs.com/). I believe the Node.js installer for Windows and Mac will also install Npm for you, while Linux users will be required to install it separately via package manager. Please double check though! You can check your installation of Node.js with `node --version` or `nodejs --version`. The same can be done for Npm with `npm --version`.
++ Install [Node.js](https://nodejs.org/en/) and [Npm](https://www.npmjs.com/). I believe the Node.js installer for Windows and Mac will also install Npm for you, while Linux users will be required to install them separately via package manager. Please double check though! You can check your installation of Node.js with `node --version` or `nodejs --version`. The same can be done for Npm with `npm --version`.
 
-+ Install the [http-server](https://www.npmjs.com/package/http-server) package globally with `npm install http-server -g`.
++ Install [http-server](https://www.npmjs.com/package/http-server) globally with `npm install http-server -g`.
 
 + Clone this repository to a location of your choosing with `git clone https://github.com/abaran30/hextechhunt.git`
 
-+ Inside the project folder will be two additional folders: *hextechhunt-client* and *hextechhunt-server*. Run `npm install` in **both** of those folders.
++ Inside the project folder will be two additional folders: *hextechhunt-client* and *hextechhunt-server*. Run `npm install` in **both** folders.
 
 + After you verify a successful installation of dependencies (a *node_modules* folder will appear in both *hextechhunt-client* and *hextechhunt-server*), you will now need to run two processes. I recommend having two terminal instances open for this; one for each process. For the first process, in *hextech-client*, run `http-server`. If successful, you should see output like the following:
 ```
@@ -79,7 +79,7 @@ When the project is running locally, keep in mind of the following:
 + Changes made to the code in *hextech-server* will require a server restart. Simply kill the server process (Ctrl + C) and re-run `npm start` in *hextech-server*.
 
 ## Special Thanks
-Special thanks to Riot Games for giving us the opportunity to create these awesome, game-data-driven applications. Win or lose this API Challenge (April 2016), it has been a most pleasurable experience to create my own application featuring Riot Games data and League of Legends. Developing this application helped me learn more about the aforementioned technologies and API-driven development in general, and for that I am grateful.
+Special thanks to Riot Games for giving us the opportunity to create these awesome, game-data-driven applications. Win or lose the April 2016 API Challenge, it has been a most pleasurable experience to create my own application featuring Riot Games data and League of Legends. Developing this application helped me learn more about the aforementioned technologies and API-driven development in general, and for that I am very grateful.
 
 ## Disclaimer
 

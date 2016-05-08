@@ -70,7 +70,7 @@ angular.module('hextechhuntClientApp')
       return httpGet(requestUrl);
     };
 
-    // Helper method to make HTTP calls, with promises
+    // Helper method to make HTTP GET calls, with promises
     function httpGet(requestUrl) {
       var deferred = $q.defer();
 
