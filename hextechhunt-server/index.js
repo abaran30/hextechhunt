@@ -15,11 +15,11 @@ var riotApiKey = process.env.RIOT_API_KEY; // My development API key
 // Express middleware
 app.use('/', function(req, res, next) {
   // Application headers
-  res.setHeader('Access-Control-Allow-Origin', 'http://' + hostAddress + ':8080'); // Allow connection from the host
-  res.setHeader('Access-Control-Allow-Methods', 'GET'); // Allow GET request methods only
+  res.setHeader('Access-Control-Allow-Origin', 'http://' + hostAddress + ':8080'); // Allow hostAddress:8080 origin
+  res.setHeader('Access-Control-Allow-Methods', 'GET'); // Allow GET request methods
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // Allow X-Requested-With and content-type request headers
 
-  // Only continue if the request is coming from the HextechHunt client
+  // Check if the origin is valid
   if (req.get('origin')) {
     next(); // Continue
   } else {
