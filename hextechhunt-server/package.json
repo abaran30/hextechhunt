@@ -1,6 +1,6 @@
 {
   "name": "hextechhunt-server",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Adrian Baran",
   "description": "Server component for the HextechHunt web application (hextechhunt-server).",
   "repository": {
