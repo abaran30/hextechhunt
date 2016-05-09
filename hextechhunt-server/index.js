@@ -20,7 +20,7 @@ app.use('/', function(req, res, next) {
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // Allow X-Requested-With and content-type request headers
 
   // Only continue if the request is coming from the HextechHunt client
-  if (req.ip === hostAddress) {
+  if (req.get('origin')) {
     next(); // Continue
   } else {
     res.send('HextechHunt - Action not allowed'); // Action not allowed - send error message
