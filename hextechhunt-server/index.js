@@ -15,10 +15,16 @@ var riotApiKey = process.env.RIOT_API_KEY; // My development API key
 // Express middleware
 app.use('/', function(req, res, next) {
   // Application headers
-  res.setHeader('Access-Control-Allow-Origin', 'http://' + hostAddress + ':8080'); // Allow connection from the host only
+  res.setHeader('Access-Control-Allow-Origin', 'http://' + hostAddress + ':8080'); // Allow connection from the host
   res.setHeader('Access-Control-Allow-Methods', 'GET'); // Allow GET request methods only
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // Allow X-Requested-With and content-type request headers
-  next(); // Continue
+
+  // Only continue if the request is coming from the HextechHunt client
+  if (req.ip === hostAddress) {
+    next(); // Continue
+  } else {
+    res.send('HextechHunt - Action not allowed'); // Action not allowed - send error message
+  }
 });
 
 // Proxy for GET /championmastery/location/{platformId}/player/{summonerId}/champions
