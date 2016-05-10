@@ -69,12 +69,13 @@ angular.module('hextechhuntClientApp')
                 // in the near future (if a Chest has not been rewarded already)
                 var hextechChestRewardedIcon = 'images/checkmark.png'; // Default,
 
+                var gradesOfPotential = ['A+', 'S-', 'S', 'S+'];
+
                 if (!hextechChestRewarded) {
                   // The criteria for determining whether this Champion falls under the "potential" case is simple
-                  //
-                  // If this Champion has a Mastery level of 4 or 5, and the highest grade earned with this Champion is an A or A+, flag it as having
-                  // "potential"
-                  if (championMasteryLevel >= 4 && (highestGradeEarned === 'A' || highestGradeEarned === 'A+')) {
+                  // If this Champion has a Mastery level of 4 or 5, and the highest grade earned with this Champion is an A+, S-, S, or S+, flag it as
+                  // having "potential"
+                  if (championMasteryLevel >= 4 && (gradesOfPotential.indexOf(highestGradeEarned) > -1)) {
                     hextechChestRewardedIcon = 'images/asterisk.png';
                   } else { // Hextech Chest has not been granted with this Champion, and this Champion does not fall under the "potential" case
                     hextechChestRewardedIcon = 'images/x.png';
