@@ -33,7 +33,7 @@ Some challenges I faced:
 + Allow sorting the results in the Results view.
 + Come up with a more sophisticated way of predicting which Champions hold significant potential to reward the player with a Chest, if they have not been rewarded already.
 + End to end testing with [Protractor](http://angular.github.io/protractor/#/).
-+ More general testing.
++ Do more testing.
 + Make the application more responsive for better mobile viewing.
 + Generally improve styling.
 
