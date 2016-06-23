@@ -16,7 +16,7 @@ angular.module('hextechhuntClientApp')
         'LeBlanc': 'Leblanc',
         'KhaZix': 'Khazix',
         'VelKoz': 'Velkoz',
-        "Wukong": 'MonkeyKing' // Uhm..?
+        'Wukong': 'MonkeyKing'
       };
 
       CanvasLoaderService.showSpinner(); // Upon entering the view, display the CanvasLoader to indicate data gathering/loading

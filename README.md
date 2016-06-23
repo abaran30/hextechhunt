@@ -1,9 +1,6 @@
 # HextechHunt
 
-HextechHunt is a web application that will allow League of Legends players to keep track of their Hextech Chest rewards via Champion Mastery for the current season. Players can enter their Summoner name and select their Region to view a comprehensive list of Champions that they have played, and see whether or not they have been granted a Hextech Chest as a reward for Champion Mastery (by either themselves or a teammate). The list will also indicate which Champions hold significant potential to reward the player with a Chest if they have not been rewarded already.
-
-## Live Demo
-Demo can be found [here](http://104.236.80.122:8080/).
+HextechHunt is a web application that allows League of Legends players to keep track of their Hextech Chest rewards via Champion Mastery for the current season. Players can enter their Summoner name and select their Region to view a comprehensive list of Champions that they have played, and see whether or not they have been granted a Hextech Chest as a reward for Champion Mastery (by either themselves or a teammate). The list will also indicate which Champions hold significant potential to reward the player with a Chest if they have not been rewarded already.
 
 ## The Technologies and Libraries
 + [AngularJS (1.5.5)](https://angularjs.org/)
@@ -26,13 +23,13 @@ Although I am very well aware that this application is simple, and that many Rio
 Some challenges I faced:
 + I am a full-time employee, so time management was a big challenge.
 + When implementing the Results using Champion and ChampionMastery data, my JavaScript promises were misbehaving >:( I had to carefully analyze my returned promises and come up with a way to enforce data integrity.
-+ I had some issues with the Static Data, primarily with the Champion (square) images. I had to convert the names of some of the Champions with camel-case names; e.g. *LeBlanc* had to get converted to *Leblanc*. However, *Rek'Sai* only had to lose the apostrophe, and keep its camel-case name (?). Finally, there is *Wukong*, who had to get converted to *MonkeyKing*. Figured that out thanks to this [forum discussion](https://developer.riotgames.com/discussion/community-discussion/show/p7fE97po).
++ I had some issues with the Static Data, primarily with the Champion (square) images. I had to convert the names of some of the Champions with camel-case names; e.g. *LeBlanc* had to get converted to *Leblanc*. However, *Rek'Sai* only had to lose the apostrophe, and keep its camel-case name (?). Finally, there is *Wukong*, who had to get converted to *MonkeyKing*. Figured that out thanks to this [forum discussion](https://developer.riotgames.com/discussion/community-discussion/show/p7fE97po). Should I have extra time, I will implement a request to the API to get me the correct Champion keys.
 
 ## If I Had Extra Time, I Would Have Liked To...
 + Learn and utilize a web framework to simplify my implementation.
 + Allow sorting the results in the Results view.
 + Come up with a more sophisticated way of predicting which Champions hold significant potential to reward the player with a Chest, if they have not been rewarded already.
-+ End to end testing with [Protractor](http://angular.github.io/protractor/#/).
++ Implement end to end testing with [Protractor](http://angular.github.io/protractor/#/).
 + Do more testing.
 + Make the application more responsive for better mobile viewing.
 + Generally improve styling.
@@ -72,7 +69,7 @@ Hit CTRL-C to stop the server
 HextechHunt (Server) started at http://localhost:3030
 ```
 
-+ At this point, the application is running locally! Open up your favorite browser (Google Chrome or Firefox recommended) and navigate to http://localhost:8080. If all went well, you will be in *HextechHunt*!
++ At this point, the application is running locally! Open up your favorite browser (Google Chrome or Firefox recommended) and navigate to http://localhost:8080. If all went well, you will be in HextechHunt!
 
 ### Notes for Development
 When the project is running locally, keep in mind of the following:
@@ -84,5 +81,5 @@ Special thanks to Riot Games for giving us the opportunity to create these aweso
 
 ## Disclaimer
 
-*HextechHunt* isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing *League of Legends*.
-*League of Legends* and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+HextechHunt isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends.
+League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
