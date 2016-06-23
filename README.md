@@ -18,12 +18,12 @@ Here is an overview of the application's bread and butter components at work:
 ![alt tag](hextechhunt-overview.png)
 
 ## Experiences and Challenges
-Although I am very well aware that this application is simple, and that many Riot Games API Challenge entries demonstrate phenomenal skills in design, development, data analysis, etc., I took the development of this application as an opportunity to learn and grow. The majority of my development experience comes from back-end development both academically and professionally. Only recently did I start getting into front-end development and frameworks such as AngularJS and Node.js. Hence, I took all that I knew, learned and did what I could, and ended up with *HextechHunt*.
+Although I am very well aware that this application is simple, and that many Riot Games API Challenge entries demonstrate phenomenal skills in design, development, data analysis, etc., I took the development of this application as an opportunity to learn and grow. The majority of my development experience comes from back-end development both academically and professionally. Only recently did I start getting into front-end development and frameworks such as AngularJS and Node.js. Hence, I took all that I knew, learned and did what I could, and ended up with HextechHunt.
 
 Some challenges I faced:
 + I am a full-time employee, so time management was a big challenge.
 + When implementing the Results using Champion and ChampionMastery data, my JavaScript promises were misbehaving >:( I had to carefully analyze my returned promises and come up with a way to enforce data integrity.
-+ I had some issues with the Static Data, primarily with the Champion (square) images. I had to convert the names of some of the Champions with camel-case names; e.g. *LeBlanc* had to get converted to *Leblanc*. However, *Rek'Sai* only had to lose the apostrophe, and keep its camel-case name (?). Finally, there is *Wukong*, who had to get converted to *MonkeyKing*. Figured that out thanks to this [forum discussion](https://developer.riotgames.com/discussion/community-discussion/show/p7fE97po). Should I have extra time, I will implement a request to the API to get me the correct Champion keys.
++ I had some issues with the Static Data, primarily with the Champion (square) images. I had to convert the names of some of the Champions with camel-case names; e.g. *LeBlanc* had to get converted to *Leblanc*. However, *Rek'Sai* only had to lose the apostrophe, and keep its camel-case name (?). Finally, there is *Wukong*, who had to get converted to *MonkeyKing*. Figured that out thanks to this [forum discussion](https://developer.riotgames.com/discussion/community-discussion/show/p7fE97po). Should I have extra time, I will implement a request to the API to get the correct Champion keys.
 
 ## If I Had Extra Time, I Would Have Liked To...
 + Learn and utilize a web framework to simplify my implementation.
