@@ -10,6 +10,8 @@ angular.module('hextechhuntClientApp')
 
       // Some Champion keys differ from the spelling of their names, which can cause issues with obtaining Static Data
       // This object contains the known Champions who use a different key for Static Data, i.e. Champion (square) icon
+      //
+      // TODO: Implement a request to the API to get the correct Champion keys
       var specialChampionsForIconUrl = {
         'ChoGath': 'Chogath',
         'Fiddlesticks': 'FiddleSticks',
@@ -67,7 +69,7 @@ angular.module('hextechhuntClientApp')
 
                 // Analyze this Champion Mastery and determine whether or not this Champion has significant potential to award the player with a Hextech Chest
                 // in the near future (if a Chest has not been rewarded already)
-                var hextechChestRewardedIcon = 'images/checkmark.png'; // Default,
+                var hextechChestRewardedIcon = 'images/checkmark.png'; // Default
 
                 var gradesOfPotential = ['A+', 'S-', 'S', 'S+'];
 
