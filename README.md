@@ -2,7 +2,7 @@
 
 #### Please note that this implementation is out of date. The Riot API has changed significantly since the development of this app, and so it's likely to not behave as expected.
 
-HextechHunt is a web application that allows League of Legends players to keep track of their Hextech Chest rewards via Champion Mastery for the current season. Players can enter their Summoner name and select their Region to view a comprehensive list of Champions that they have played, and see whether or not they have been granted a Hextech Chest as a reward for Champion Mastery (by either themselves or a teammate). The list will also indicate which Champions hold significant potential to reward the player with a Chest if they have not been rewarded already.
+HextechHunt is a web application that allows *League of Legends* players to keep track of their Hextech Chest rewards via Champion Mastery for the current season. Players can enter their Summoner name and select their Region to view a comprehensive list of Champions that they have played, and see whether or not they have been granted a Hextech Chest as a reward for Champion Mastery (by either themselves or a teammate). The list will also indicate which Champions hold significant potential to reward the player with a Chest if they have not been rewarded already.
 
 ## The Technologies and Libraries
 + [AngularJS (1.5.5)](https://angularjs.org/)
@@ -79,7 +79,7 @@ When the project is running locally, keep in mind of the following:
 + Changes made to the code in *hextech-server* will require a server restart. Simply kill the server process (Ctrl + C) and re-run `npm start` in *hextech-server*.
 
 ## Special Thanks
-Special thanks to Riot Games for giving us the opportunity to create these awesome, game-data-driven applications. Win or lose the April 2016 API Challenge, it has been a most pleasurable experience to create my own application featuring Riot Games data and League of Legends. Developing this application helped me learn more about the aforementioned technologies and API-driven development in general, and for that I am very grateful.
+Special thanks to Riot Games for giving us the opportunity to create these awesome, game-data-driven applications. Win or lose the April 2016 API Challenge, it has been a most pleasurable experience to create my own application featuring Riot Games data and *League of Legends*. Developing this application helped me learn more about the aforementioned technologies and API-driven development in general, and for that I am very grateful.
 
 ## Disclaimer
 
